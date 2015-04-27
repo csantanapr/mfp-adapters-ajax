@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  	<meta charset="UTF-8">
+  	<title>myapp</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  	<!--
+  		<link rel="shortcut icon" href="images/favicon.png">
+  		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  	-->
+  	<link rel="stylesheet" href="css/main.css">
+  	<script>window.$ = window.jQuery = WLJQ;</script>
+  </head>
+	<body style="display: none;">
+		<!--application UI goes here-->
+    Two ways to call adapters:
+    <ol>
+      <li>1. Helper API WLResourceRequest
+        <div><button onclick='onSendWLRequest()'>using WLResourceRequest</button></div>
+      </li>
+
+      <li>2. Http client XMLHttpRequest (i.e. ajax)
+        <div><button onclick='onSendAjaxRequest()'>using WLAuthorizationManager</button></div>
+      </li>
+    </ol>
+    <div id="resultLabel">Results </div>
+		<textarea style="width: 95%; height: 275px;" id='result'></textarea>
+    <button  onclick="document.getElementById('result').value=''">clear</button>
+
+    <script src="js/initOptions.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/messages.js"></script>
+	</body>
+</html>
