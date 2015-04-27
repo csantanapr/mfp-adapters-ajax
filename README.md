@@ -82,11 +82,11 @@ $ mfp preview
 ![Picture of screenshot of Mobile Browser Simulator Using Ajax API](mbs_preview_ajax.png "Mobile Browser Simulator Ajax")
 
 ### More Information
+
 - Check the [MFP Getting Started](https://developer.ibm.com/mobilefirstplatform/documentation/getting-started/)
 - Check the [MFP Docs](http://www-01.ibm.com/support/knowledgecenter/SSNJXP/welcome.html)
 - Check the Doc section [Client access to adapters](http://www-01.ibm.com/support/knowledgecenter/SSHS8R_7.0.0/com.ibm.worklight.dev.doc/devref/c_client_access_to_adap.html)
 - Check the Doc section [Custom requests to resources using JavaScript](http://www-01.ibm.com/support/knowledgecenter/SSHS8R_7.0.0/com.ibm.worklight.dev.doc/dev/c_custom_request_to_resource_hybrid.html)
--
 
 ### License
 Apache 2.0
