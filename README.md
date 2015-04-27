@@ -72,7 +72,13 @@ $ mfp preview
 - Java based adapters using JXRS support more HTTP verbs, check the MFP documentation for more details
 
 ### Demo
+
+- Using Helper API WLResourceRequest helper API
+
 ![Picture of screenshot of Mobile Browser Simulator Using Helper API](mbs_preview_helper.png "Mobile Browser Simulator Helper API")
+
+- Using straight http client XMLHttpRequest (i.e. ajax)
+
 ![Picture of screenshot of Mobile Browser Simulator Using Ajax API](mbs_preview_ajax.png "Mobile Browser Simulator Ajax")
 
 ### More Information
