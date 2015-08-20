@@ -60,7 +60,7 @@
         <preference name="loginDisplay" value="embedded" />
         <preference name="wlNativeVersion" value="2170286215" />
     </platform>
-    <preference name="mfpServerUrl" value="http://9.27.81.217:10080" />
+    <preference name="mfpServerUrl" value="http://localhost:10080" />
     <preference name="mfpServerRuntime" value="BackendRuntime" />
     <preference name="displayName" value="cordova" />
     <preference name="mfpManualInit" value="false" />
