@@ -12,39 +12,29 @@ var wlInitOptions = {
 // Called automatically after MFP framework initialization by WL.Client.init(wlInitOptions).
 function wlCommonInit(){
 	// Common initialization code goes here
-    document.getElementById('app_version').innerText = WL.Client.getAppProperty("APP_VERSION");
-    document.getElementById('mobilefirst').setAttribute('style', 'display:block;');
+    alert('MFP CLient SDK Ready');
+}
+var adapterName = 'cnnadapter';
+var adapterProcedure = 'getStories';
+
+function onSendWLRequest() {
+  new WLResourceRequest(
+      'adapters/' + adapterName + '/' + adapterProcedure,
+      WLResourceRequest.GET
+    )
+    .send()
+    .then(
+      onResponse,
+      onResponse
+    );
 }
 
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, 'app.receivedEvent(...);' must be explicitly called.
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-
-    // Update the DOM on a received event.
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
-};
-
-app.initialize();
+function onResponse(response) {
+  //alert(JSON.stringify(response));
+  console.log(response);
+  if (response.responseText) { //to filter long text from textarea
+    delete response.responseText;
+  }
+  document.getElementById('resultLabel').innerHTML = 'Results for ' + adapterName + '/' + adapterProcedure;
+  document.getElementById('result').value = JSON.stringify(response, null, '\t');
+}
